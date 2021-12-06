@@ -6,6 +6,7 @@
     <Project id="Project" />
     <Career id="Career" />
     <Contact id="Contact" />
+    <ProjectLightBox />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Skill from "@/components/Skill.vue";
 import Project from "@/components/Project.vue";
 import Career from "@/components/Career.vue";
 import Contact from "@/components/Contact.vue";
+import ProjectLightBox from "@/components/ProjectLightBox.vue";
 
 export default {
   name: "Home",
@@ -27,6 +29,7 @@ export default {
     Project,
     Career,
     Contact,
+    ProjectLightBox,
   },
 };
 </script>

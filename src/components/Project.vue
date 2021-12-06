@@ -4,7 +4,11 @@
     <hr />
     <div class="project">
       <div class="project-item" v-for="item in Project_data" :key="item">
-        <div class="img" :class="item.name" @click="goto(item.goto)">
+        <div
+          class="img"
+          :class="item.name"
+          @click="goto(item.goto, item.lightBox, item.name)"
+        >
           <img :src="item.img" alt="" />
           <div class="name">
             <p>{{ item.name }}</p>
@@ -27,37 +31,54 @@ export default {
           content: "Angular",
           img: require("../assets/Diamondweb.png"),
           goto: "https://www.diamondonline.com.tw/official-website",
+          lightBox: false,
         },
         {
           name: "Diamond-Online 後台",
           content: "JavaScript jQuery Ajax C# ASP.NET",
           img: require("../assets/Diamondback.png"),
-          goto: "",
+          goto: "DiamondBack",
+          lightBox: true,
         },
         {
           name: "Diamond-Online 實體店鋪控管平台",
           content: "Vue.js Vue-cli Vuex Vue-router axios",
           img: require("../assets/Diamondrest.png"),
-          goto: "https://tibamef2e.com/ced101/project/g2/index.html",
+          goto: "RestBack",
+          lightBox: true,
+        },
+        {
+          name: "jbot深度會員資訊",
+          content: "JavaScript jQuery Ajax",
+          img: require("../assets/JB.jpg"),
+          goto: "JBsports",
+          lightBox: true,
         },
         {
           name: "偵茶者",
           content: "Vue.js jQuery Gulp PHP",
-          img: require("../assets/logo.png"),
+          img: require("../assets/tea.jpg"),
           goto: "https://tibamef2e.com/ced101/project/g2/index.html",
+          lightBox: false,
         },
         {
           name: "ZOEY Dance studio",
           content: "JavaScript jQuery",
-          img: require("../assets/logo.png"),
+          img: require("../assets/zoey.jpg"),
           goto: "https://chiehlin23.github.io/works/",
+          lightBox: false,
         },
       ],
     };
   },
   methods: {
-    goto(url) {
-      window.open(url);
+    goto(url, lightBox, name) {
+      if (lightBox) {
+        document.querySelector("body").style.overflow = "hidden";
+        this.$store.commit("projectOpen", { url: url, name: name });
+      } else {
+        window.open(url);
+      }
     },
   },
 };
