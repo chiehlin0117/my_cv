@@ -93,6 +93,11 @@ export default {
   background-position: center;
   padding: 8rem;
 }
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 5rem 0;
+  }
+}
 .project {
   display: flex;
   /* border: 1px solid black; */
@@ -101,9 +106,15 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .project-item {
   margin: 1rem;
   width: 13rem;
+}
+@media screen and (max-width: 576px) {
+  .project {
+    width: 100%;
+  }
 }
 .img {
   position: relative;
@@ -113,6 +124,7 @@ export default {
   border-radius: 1rem;
   box-shadow: 3px 3px 3px black;
 }
+
 .img .name {
   width: 100%;
   height: 100%;

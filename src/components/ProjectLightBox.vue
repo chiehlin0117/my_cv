@@ -71,11 +71,24 @@ export default {
   margin: 0 auto;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 576px) {
+  .websiteImg {
+    width: 90%;
+  }
+  .mobileImg {
+    width: 90%;
+  }
+}
 h1 {
   margin: 0;
   font-size: 1.5rem;
   color: #2c3e50;
   letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    padding: 0 1rem;
+  }
 }
 p {
   margin: 0;

@@ -47,6 +47,11 @@ export default {
 .main {
   padding: 8rem;
 }
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 5rem 0;
+  }
+}
 h1 {
   margin: 0;
   font-size: 3rem;

@@ -27,11 +27,22 @@ export default {
   background-color: #f05f40;
   padding: 8rem;
 }
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 5rem;
+    text-align: left;
+  }
+}
 h1 {
   margin: 0;
   font-size: 3rem;
   color: #fafafe;
   letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    text-align: center;
+  }
 }
 p {
   color: #fafafe;

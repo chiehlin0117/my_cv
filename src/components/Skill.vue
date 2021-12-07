@@ -41,8 +41,12 @@ export default {
 <style scoped>
 .chart-box {
   padding: 8rem;
-  /* padding-bottom: 0; */
   background-color: #fafafe;
+}
+@media screen and (max-width: 576px) {
+  .chart-box {
+    padding: 5rem 2rem;
+  }
 }
 h1 {
   margin: 0;
@@ -72,6 +76,14 @@ hr {
   position: relative;
   padding-top: 10px;
   color: #fafafe;
+}
+@media screen and (max-width: 576px) {
+  .chart-item {
+    width: 10%;
+    position: relative;
+    padding-top: 10px;
+    font-size: 0.5rem;
+  }
 }
 .chart-item:hover {
   background-color: #317f81;

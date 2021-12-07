@@ -44,6 +44,22 @@ export default {
   font-family: Arial;
   text-align: left;
 }
+@media screen and (max-width: 576px) {
+  .viedo {
+    position: relative;
+    top: -30%;
+    left: -80%;
+  }
+  .nav_right {
+    display: none;
+  }
+  .content {
+    position: absolute;
+    top: 23%;
+    left: 0%;
+    text-align: center;
+  }
+}
 p {
   margin: 0;
 }
@@ -60,5 +76,13 @@ hr {
   background-color: #f05f40;
   border: #f05f40;
   height: 2px;
+}
+@media screen and (max-width: 576px) {
+  .content p:nth-child(1) {
+    font-size: 3rem;
+  }
+  hr {
+    width: 80%;
+  }
 }
 </style>

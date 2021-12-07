@@ -185,7 +185,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #nav {
   display: flex;
@@ -196,7 +195,6 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  /* background: linear-gradient(to bottom, #b0d0e6 0%, #ffffff 100%); */
   background-color: black;
   opacity: 0.8;
   z-index: 1;
@@ -206,6 +204,7 @@ export default {
   cursor: pointer;
   color: #aaaaaa;
 }
+
 .nav_left p:nth-child(1) {
   font-size: 1.4rem;
   font-weight: 1000;
@@ -213,6 +212,11 @@ export default {
 .nav_right {
   display: flex;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 576px) {
+  .nav_right {
+    display: none;
+  }
 }
 .nav_right div:hover {
   color: #317f81;
