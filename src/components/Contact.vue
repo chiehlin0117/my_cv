@@ -51,6 +51,8 @@ export default {
 @media screen and (max-width: 576px) {
   .main {
     padding: 5rem 0;
+    height: auto;
+    background-size: contain;
   }
 }
 h1 {
@@ -81,64 +83,5 @@ p {
 .name {
   font-weight: bold;
   color: #2c3e50;
-}
-.part {
-  /* border: 1px solid black; */
-
-  justify-content: center;
-}
-.left,
-.right {
-  width: 400px;
-}
-.right {
-  border-left: 4px solid #f05f40;
-  position: relative;
-  text-align: left;
-  padding-left: 50px;
-}
-.right::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -17px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f05f40;
-}
-.right::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: -17px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f05f40;
-}
-.left {
-  margin-top: 100px;
-  position: relative;
-  text-align: right;
-  padding-right: 50px;
-  height: 200px;
-}
-.left::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  right: -17px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f05f40;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  margin: 0;
 }
 </style>

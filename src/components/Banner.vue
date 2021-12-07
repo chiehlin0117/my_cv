@@ -47,15 +47,16 @@ export default {
 @media screen and (max-width: 576px) {
   .viedo {
     position: relative;
-    top: -30%;
-    left: -80%;
+    top: -0%;
+    left: -180%;
   }
   .nav_right {
     display: none;
   }
   .content {
     position: absolute;
-    top: 23%;
+    padding: 10px;
+    top: 35%;
     left: 0%;
     text-align: center;
   }

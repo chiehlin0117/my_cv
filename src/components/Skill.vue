@@ -45,7 +45,7 @@ export default {
 }
 @media screen and (max-width: 576px) {
   .chart-box {
-    padding: 5rem 2rem;
+    padding: 5rem 0.5rem;
   }
 }
 h1 {

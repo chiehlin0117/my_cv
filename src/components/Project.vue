@@ -96,6 +96,7 @@ export default {
 @media screen and (max-width: 576px) {
   .main {
     padding: 5rem 0;
+    background-size: contain;
   }
 }
 .project {

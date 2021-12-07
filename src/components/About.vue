@@ -29,7 +29,7 @@ export default {
 }
 @media screen and (max-width: 576px) {
   .main {
-    padding: 5rem;
+    padding: 5rem 1.5rem;
     text-align: left;
   }
 }
