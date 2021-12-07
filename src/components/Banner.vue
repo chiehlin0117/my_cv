@@ -50,7 +50,7 @@ export default {
     background: url("../assets/banner.jpg");
     background-attachment: fixed;
     background-size: contain;
-    background-position: bottom;
+    background-position: top;
   }
   .viedo {
     display: none;
