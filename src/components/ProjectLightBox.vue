@@ -1,10 +1,24 @@
 <template>
   <div class="main" v-if="projectName != ''">
     <button @click="closeLightBox">X</button>
-    <p>WEBSITE</p>
+    <p v-if="projectEN == 'RestBack'">MOBILE</p>
+    <p v-else>WEBSITE</p>
     <h1>{{ projectName }}</h1>
     <hr />
-    <div class="websiteImg" v-for="item in project" :key="item">
+    <div
+      class="websiteImg"
+      v-for="item in project"
+      :key="item"
+      v-show="projectEN != 'RestBack'"
+    >
+      <img :src="item" alt="" />
+    </div>
+    <div
+      v-show="projectEN == 'RestBack'"
+      class="mobileImg"
+      v-for="item in project"
+      :key="item"
+    >
       <img :src="item" alt="" />
     </div>
   </div>
@@ -23,10 +37,13 @@ export default {
     projectName() {
       return this.$store.state.projectName;
     },
+    projectEN() {
+      return this.$store.state.projectEN;
+    },
   },
   methods: {
     closeLightBox() {
-      document.querySelector("body").style.overflow = "scroll";
+      document.querySelector("body").style.overflowY = "scroll";
       this.$store.commit("closeLightBox");
     },
   },
@@ -39,13 +56,18 @@ export default {
   background-color: rgba(255, 255, 255);
   position: fixed;
   top: 0;
-  overflow: scroll;
+  overflow-y: scroll;
   width: 100vw;
   height: 100vh;
   z-index: 99;
 }
 .websiteImg {
   width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.mobileImg {
+  width: 300px;
   margin: 0 auto;
   margin-bottom: 20px;
 }

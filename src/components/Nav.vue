@@ -75,6 +75,7 @@ export default {
   name: "Nav",
   data() {
     return {
+      scrollTop: [],
       navClassHome: "nav_items_click",
       navClassAbout: "nav_items",
       navClassSkill: "nav_items",
@@ -82,6 +83,11 @@ export default {
       navClassCareer: "nav_items",
       navClassContact: "nav_items",
     };
+  },
+  watch: {
+    scrollTop: function () {
+      console.log(window.scrollY);
+    },
   },
   methods: {
     Home() {
@@ -135,12 +141,55 @@ export default {
     Submit(key) {
       let pageId = document.querySelector("#" + key);
       let navHeight = document.querySelector("#nav");
-
+      // console.log(pageId.offsetTop - navHeight.offsetHeight);
       window.scrollTo({
         top: pageId.offsetTop - navHeight.offsetHeight,
         behavior: "smooth",
       });
     },
+    handleScroll() {
+      this.scrollTop = [];
+      let key = ["Banner", "About", "Skill", "Project", "Career", "Contact"];
+      let navHeight = document.querySelector("#nav");
+      for (let i = 0; i < key.length; i++) {
+        let pageId = document.querySelector("#" + key[i]);
+        console.log(pageId.offsetTop);
+        this.scrollTop.push(pageId.offsetTop - navHeight.offsetHeight);
+      }
+      console.log(this.scrollTop);
+      console.log(window.scrollY);
+      let scrollHeight = window.scrollY;
+      console.log(this.scrollTop[1]);
+      if (scrollHeight >= 0 && scrollHeight < this.scrollTop[1]) {
+        this.Home();
+      } else if (
+        scrollHeight >= this.scrollTop[1] &&
+        scrollHeight < this.scrollTop[2]
+      ) {
+        this.About();
+      } else if (
+        scrollHeight >= this.scrollTop[2] &&
+        scrollHeight < this.scrollTop[3]
+      ) {
+        this.Skill();
+      } else if (
+        scrollHeight >= this.scrollTop[3] &&
+        scrollHeight < this.scrollTop[4]
+      ) {
+        this.Project();
+      } else if (
+        scrollHeight >= this.scrollTop[4] &&
+        scrollHeight < this.scrollTop[5]
+      ) {
+        this.Career();
+      } else if (scrollHeight >= this.scrollTop[5]) {
+        this.Contact();
+      }
+    },
+  },
+  mounted() {},
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
   },
 };
 </script>

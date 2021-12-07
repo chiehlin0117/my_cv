@@ -21,24 +21,8 @@ export default {
       photo: require("../assets/myPhoto.jpg"),
     };
   },
-  computed: {
-    project() {
-      return this.$store.state.project;
-    },
-    projectName() {
-      return this.$store.state.projectName;
-    },
-  },
-  methods: {
-    closeLightBox() {
-      document.querySelector("body").style.overflow = "scroll";
-      this.$store.commit("closeLightBox");
-    },
-  },
 };
 </script>
-
-
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -62,6 +46,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding: 8rem;
+  height: 80vh;
 }
 h1 {
   margin: 0;
