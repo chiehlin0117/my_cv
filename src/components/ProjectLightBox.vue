@@ -112,4 +112,10 @@ button {
   right: 50px;
   cursor: pointer;
 }
+@media screen and (max-width: 576px) {
+  button {
+    top: 10px;
+    right: 10px;
+  }
+}
 </style>
