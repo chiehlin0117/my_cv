@@ -30,7 +30,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .banner {
-  height: 100vh;
+  height: 1000px;
   overflow: hidden;
 }
 .viedo {
@@ -45,6 +45,9 @@ export default {
   text-align: left;
 }
 @media screen and (max-width: 576px) {
+  .banner {
+    height: 100vh;
+  }
   .viedo {
     position: relative;
     top: -0%;

@@ -45,8 +45,7 @@ export default {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  padding: 8rem;
-  height: 80vh;
+  padding: 10rem 8rem;
 }
 @media screen and (max-width: 576px) {
   .main {
