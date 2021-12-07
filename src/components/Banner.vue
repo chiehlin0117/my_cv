@@ -47,11 +47,16 @@ export default {
 @media screen and (max-width: 576px) {
   .banner {
     height: 100vh;
+    background: url("../assets/banner.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
   .viedo {
     position: relative;
     top: -0%;
     left: -180%;
+    display: none;
   }
   .nav_right {
     display: none;
@@ -59,9 +64,10 @@ export default {
   .content {
     position: absolute;
     padding: 10px;
-    top: 35%;
+    top: 30%;
     left: 0%;
     text-align: center;
+    text-shadow: 0px 0px 2px #fff;
   }
 }
 p {
