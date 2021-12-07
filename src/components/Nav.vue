@@ -152,28 +152,34 @@ export default {
       }
       let scrollHeight = window.scrollY;
       if (scrollHeight >= 0 && scrollHeight < this.scrollTop[1]) {
+        this.$store.state.skillAnimation = false;
         this.Home();
       } else if (
         scrollHeight >= this.scrollTop[1] &&
         scrollHeight < this.scrollTop[2]
       ) {
+        this.$store.state.skillAnimation = false;
         this.About();
       } else if (
         scrollHeight >= this.scrollTop[2] &&
         scrollHeight < this.scrollTop[3]
       ) {
+        this.$store.state.skillAnimation = true;
         this.Skill();
       } else if (
         scrollHeight >= this.scrollTop[3] &&
         scrollHeight < this.scrollTop[4]
       ) {
+        this.$store.state.skillAnimation = false;
         this.Project();
       } else if (
         scrollHeight >= this.scrollTop[4] &&
         scrollHeight < this.scrollTop[5]
       ) {
+        this.$store.state.skillAnimation = false;
         this.Career();
       } else if (scrollHeight >= this.scrollTop[5]) {
+        this.$store.state.skillAnimation = false;
         this.Contact();
       }
     },

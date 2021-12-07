@@ -107,7 +107,6 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .project-item {
   margin: 1rem;
   width: 13rem;
@@ -125,7 +124,6 @@ export default {
   border-radius: 1rem;
   box-shadow: 3px 3px 3px black;
 }
-
 .img .name {
   width: 100%;
   height: 100%;
@@ -146,7 +144,6 @@ export default {
 .img:hover .name {
   display: block;
 }
-
 h1 {
   margin: 0;
   font-size: 3rem;

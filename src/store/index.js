@@ -4,7 +4,8 @@ export default createStore({
   state: {
     projectName: "",
     project: [],
-    projectEN: ""
+    projectEN: "",
+    skillAnimation: false,
   },
   mutations: {
     projectOpen(state, data) {
