@@ -49,13 +49,10 @@ export default {
     height: 100vh;
     background: url("../assets/banner.jpg");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
   }
   .viedo {
-    position: relative;
-    top: -0%;
-    left: -180%;
     display: none;
   }
   .nav_right {
