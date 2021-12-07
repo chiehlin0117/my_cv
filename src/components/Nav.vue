@@ -153,11 +153,8 @@ export default {
       let navHeight = document.querySelector("#nav");
       for (let i = 0; i < key.length; i++) {
         let pageId = document.querySelector("#" + key[i]);
-        console.log(pageId.offsetTop);
         this.scrollTop.push(pageId.offsetTop - navHeight.offsetHeight);
       }
-      console.log(this.scrollTop);
-      console.log(window.scrollY);
       let scrollHeight = window.scrollY;
       console.log(this.scrollTop[1]);
       if (scrollHeight >= 0 && scrollHeight < this.scrollTop[1]) {
