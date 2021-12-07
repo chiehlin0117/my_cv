@@ -24,8 +24,8 @@ export default {
   data() {
     return {
       chart_data: [
-        { name: "JavaScript", value: 90 },
-        { name: "Vue", value: 80 },
+        { name: "JavaScript", value: 95 },
+        { name: "Vue", value: 90 },
         { name: "Angular", value: 60 },
         { name: "jQuery", value: 70 },
         { name: "Css", value: 90 },

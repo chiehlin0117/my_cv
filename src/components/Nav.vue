@@ -84,11 +84,6 @@ export default {
       navClassContact: "nav_items",
     };
   },
-  watch: {
-    scrollTop: function () {
-      console.log(window.scrollY);
-    },
-  },
   methods: {
     Home() {
       this.navClassHome = "nav_items_click";
@@ -156,7 +151,6 @@ export default {
         this.scrollTop.push(pageId.offsetTop - navHeight.offsetHeight);
       }
       let scrollHeight = window.scrollY;
-      console.log(this.scrollTop[1]);
       if (scrollHeight >= 0 && scrollHeight < this.scrollTop[1]) {
         this.Home();
       } else if (
