@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .chart-box {
-  padding: 8rem;
+  padding: 8rem 15rem;
   background-color: #fafafe;
 }
 @media screen and (max-width: 576px) {
@@ -65,7 +65,7 @@ hr {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  height: 400px;
+  height: 150px;
   background-color: #fafafe;
   border-bottom: 5px solid #2c3e50;
 }
