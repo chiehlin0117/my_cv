@@ -8,7 +8,7 @@
           v-for="item in chart_data"
           :key="item"
           :style="{ height: item.value + '%' }"
-          :class="(item.name, chart_item)"
+          :class="chart_item"
         >
           {{ item.value }}
         </div>
@@ -79,7 +79,7 @@ hr {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  height: 150px;
+  height: 300px;
   background-color: #fafafe;
   border-bottom: 5px solid #2c3e50;
 }
@@ -118,7 +118,7 @@ hr {
   color: #317f81;
 }
 
-.JavaScript::before {
+.chart-item:nth-child(1):before {
   content: "JavaScript";
   position: absolute;
   left: 50%;
@@ -126,16 +126,15 @@ hr {
   transform: translateX(-50%);
   color: #aaaaaa;
 }
-.Vue::before {
+.chart-item:nth-child(2):before {
   content: "Vue.js";
   position: absolute;
   left: 50%;
   bottom: -2rem;
   transform: translateX(-50%);
   color: #aaaaaa;
-  color: #aaaaaa;
 }
-.Angular::before {
+.chart-item:nth-child(3):before {
   content: "Angular";
   position: absolute;
   left: 50%;
@@ -143,7 +142,7 @@ hr {
   transform: translateX(-50%);
   color: #aaaaaa;
 }
-.jQuery::before {
+.chart-item:nth-child(4):before {
   content: "jQuery";
   position: absolute;
   left: 50%;
@@ -151,7 +150,7 @@ hr {
   transform: translateX(-50%);
   color: #aaaaaa;
 }
-.Css::before {
+.chart-item:nth-child(5):before {
   content: "Css";
   position: absolute;
   left: 50%;
@@ -159,7 +158,7 @@ hr {
   transform: translateX(-50%);
   color: #aaaaaa;
 }
-.Sass::before {
+.chart-item:nth-child(6):before {
   content: "Sass";
   position: absolute;
   left: 50%;
@@ -167,7 +166,7 @@ hr {
   transform: translateX(-50%);
   color: #aaaaaa;
 }
-.C::before {
+.chart-item:nth-child(7):before {
   content: "C#";
   position: absolute;
   left: 50%;
@@ -175,7 +174,7 @@ hr {
   transform: translateX(-50%);
   color: #aaaaaa;
 }
-.PHP::before {
+.chart-item:nth-child(8):before {
   content: "PHP";
   position: absolute;
   left: 50%;
